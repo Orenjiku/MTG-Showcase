@@ -9,7 +9,6 @@ const CardColumn = ({ colors, setName }) => {
   useEffect(() => {
     axios.get(`/cards/${setName}/${colors}`)
       .then(({ data }) => {
-        console.log(data)
         const mythic = [];
         const rare = [];
         const uncommon = [];
