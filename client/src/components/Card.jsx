@@ -2,7 +2,7 @@ import React from 'react';
 
 const Card = ({ card }) => {
   return (
-    <div key={card.id}>
+    <div>
       <img src={card.imageUrl} />
     </div>
   )

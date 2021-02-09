@@ -1,8 +1,8 @@
 module.exports = {
   selectCardProperties: (card) => {
     return {
-      id: card.id,
       name: card.name,
+      id: card.id,
       imageUrl: card.imageUrl,
       number: card.number,
       supertypes: card.supertypes

@@ -17,7 +17,7 @@ const CardColumn = ({ colors, setName }) => {
   return (
     <div className='cardColumn'>
       {cards.map((card, i) => {
-        return <Card card={card}/>
+        return <Card key={card.id} card={card} />
       })}
     </div>
   )
