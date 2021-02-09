@@ -4,11 +4,11 @@ import CardColumn from './CardColumn.jsx';
 const App = (props) => {
   return (
     <div className='cardColumnsContainer'>
-      <CardColumn colors='white' setCode='khm' />
-      {/* <CardColumn colors='blue' setCode='khm' /> */}
-      {/* <CardColumn colors='black' setCode='khm' /> */}
-      {/* <CardColumn colors='red' setCode='khm' /> */}
-      {/* <CardColumn colors='green' setCode='khm' /> */}
+      <CardColumn colors='white' setCode='2XM' />
+      <CardColumn colors='blue' setCode='2XM' />
+      <CardColumn colors='black' setCode='2XM' />
+      <CardColumn colors='red' setCode='2XM' />
+      <CardColumn colors='green' setCode='2XM' />
     </div>
   )
 }

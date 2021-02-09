@@ -5,7 +5,7 @@ const { filterOutBorderlessCards, sortByLegendary, selectCardProperties } = requ
 module.exports = {
   getCards: (req, res) => {
       const { setCode, colors } = req.params
-      axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=color%3C=${colors}+set%3A${setCode}`)
+      axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=color=${colors}+set=${setCode}`)
         .then(({ data }) => {
           res.status(200).json(data.data);
         })

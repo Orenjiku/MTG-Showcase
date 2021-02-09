@@ -13,7 +13,7 @@ const CardColumn = ({ colors, setCode }) => {
       })
   }, []);
 
-  console.log(cards);
+  // console.log(cards);
 
   return (
     <div className='cardColumn'>

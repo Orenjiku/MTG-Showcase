@@ -1,8 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 .cardColumnsContainer {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 260px);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  justify-content: center;
+  justify-items: center;
 }
 
+.cardColumn {
+  justify-self: center;
+}
+
+.cardImage {
+  width: 240px;
+  object-fit: cover;
+}
