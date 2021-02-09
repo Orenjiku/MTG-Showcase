@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import CardColumn from './CardColumn.jsx';
 
 const App = (props) => {
+  // useEffect(() => {
+  //   axios.get(')
+  // });
 
-  useEffect(() => {
-    axios.get(')
-  });
+  const [cardSet, setCardSet] = useState([]);
 
   return (
-    <div>Hello</div>
+    <div>
+      <CardColumn color='white' set='Kaldheim' />
+    </div>
   )
 }
 
