@@ -16,5 +16,5 @@ app.get('/', (req, res) => {
 
 app.use('/cards', mtgRouter);
 
-const PORT = 3000;
+PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`listening on port: ${PORT}`))

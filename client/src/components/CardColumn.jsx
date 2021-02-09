@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-// import firstBy from 'thenby';
 import Card from './Card.jsx';
 
 const CardColumn = ({ colors, setCode }) => {
@@ -12,8 +11,6 @@ const CardColumn = ({ colors, setCode }) => {
         setCards(data)
       })
   }, []);
-
-  // console.log(cards);
 
   return (
     <div className='cardColumn'>
