@@ -16,18 +16,9 @@ app.get('/', (req, res) => {
   res.status(200).send('Hello from Server')
 })
 
-app.get('/cards/white', (req, res) => {
-  // axios({
-  //   url: 'https://api.magicthegathering.io/v1/cards',
-  //   params: {
-  //     colorIdentity: 'W',
-  //     setName: 'Double Masters'
-  //   }
-  // })
-  //   .then(({data}) => {
-  //     res.status(200).json(data);
-  //   })
-  mtg.card.where({ colorIdentity: 'W', setName: 'Double Masters' })
+app.get('/cards/:setName/:colors', (req, res) => {
+  const { setName, colors } = req.params
+  mtg.card.where({ colors, setName })
     .then(cards => {
       res.status(200).json(cards);
     })

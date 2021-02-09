@@ -2,15 +2,13 @@ import React, { useState, useEffect } from 'react';
 import CardColumn from './CardColumn.jsx';
 
 const App = (props) => {
-  // useEffect(() => {
-  //   axios.get(')
-  // });
-
-  const [cardSet, setCardSet] = useState([]);
-
   return (
-    <div>
-      <CardColumn color='white' set='Kaldheim' />
+    <div className='cardColumnsContainer'>
+      <CardColumn colors='White' setName='Double Masters' />
+      <CardColumn colors='Blue' setName='Double Masters' />
+      <CardColumn colors='Black' setName='Double Masters' />
+      <CardColumn colors='Red' setName='Double Masters' />
+      <CardColumn colors='Green' setName='Double Masters' />
     </div>
   )
 }
