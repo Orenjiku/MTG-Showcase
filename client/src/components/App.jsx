@@ -21,23 +21,23 @@ const App = (props) => {
 
   return (
     <div>
-      <SetSelector setList={setList} currentSet={currentSetCode} handleChangeSet={setCurrentSetCode} />
-      {/* <div className='cardColumnsContainer'>
+      <h1 className='siteHeader'>
+        Magic: The Gathering
+      </h1>
+      <div className='setSelectorContainer'>
+        <h3 className='setSelectLabel'>Select Set:</h3>
+        <SetSelector setList={setList} currentSet={currentSetCode} handleChangeSet={setCurrentSetCode} />
+      </div>
+      <div className='cardColumnsContainer'>
         <CardColumn colors='white' setCode={currentSetCode} />
         <CardColumn colors='blue' setCode={currentSetCode}/>
         <CardColumn colors='black' setCode={currentSetCode} />
         <CardColumn colors='red' setCode={currentSetCode} />
         <CardColumn colors='green' setCode={currentSetCode} />
-      </div> */}
-      <div className='cardBlockContainer'>
-        <CardBlock colors='multicolor' setCode={currentSetCode} />
       </div>
-      {/* <div className='cardBlockContainer'>
-        <CardBlock colors='colorless' setCode={currentSetCode} />
-      </div>
-      <div className='cardBlockContainer'>
-        <CardBlock colors='land' setCode={currentSetCode} />
-      </div> */}
+      <CardBlock colors='multicolor' setCode={currentSetCode} />
+      <CardBlock colors='colorless' setCode={currentSetCode} />
+      <CardBlock colors='land' setCode={currentSetCode} />
     </div>
   )
 }

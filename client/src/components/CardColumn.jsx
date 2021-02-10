@@ -11,6 +11,7 @@ const CardColumn = ({ colors, setCode }) => {
         setCards(data)
       })
       .catch(err => {
+        setCards([])
         console.log(`No ${colors} cards found in this set.`);
       })
   }, [setCode]);

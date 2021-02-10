@@ -1,6 +1,4 @@
-const mtg = require('mtgsdk');
 const axios = require('axios');
-const { filterOutBorderlessCards, sortByLegendary, selectCardProperties } = require('../mtgHelperFuncs.js')
 
 module.exports = {
   getSets: (req, res) => {
