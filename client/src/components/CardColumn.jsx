@@ -16,8 +16,6 @@ const CardColumn = ({ attribute, setCode }) => {
       })
   }, [setCode]);
 
-  console.log(cards);
-
   return (
     <div className='cardColumn'>
       {cards.map((card, i) => {

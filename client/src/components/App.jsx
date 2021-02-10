@@ -28,7 +28,7 @@ const App = (props) => {
       </label>
       <div className='cardColumnsContainer'>
         <CardColumn attribute='white' setCode={currentSetCode} />
-        <CardColumn attribute='blue' setCode={currentSetCode}/>
+        <CardColumn attribute='blue' setCode={currentSetCode} />
         <CardColumn attribute='black' setCode={currentSetCode} />
         <CardColumn attribute='red' setCode={currentSetCode} />
         <CardColumn attribute='green' setCode={currentSetCode} />

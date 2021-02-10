@@ -22,7 +22,7 @@ const CardBlock = ({attribute, setCode}) => {
       <div className='cardBlockContainer'>
         <div className='cardRow'>
           {cards.map((card, i) => {
-              return <Card key={`${card.multiverse_ids[0]}`} card={card} />
+              return <Card key={`${attribute}%${i}${card.multiverse_ids[0]}`} card={card} />
           })}
         </div>
       </div>
