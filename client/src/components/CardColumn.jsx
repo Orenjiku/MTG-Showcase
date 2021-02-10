@@ -10,7 +10,10 @@ const CardColumn = ({ colors, setCode }) => {
       .then(({ data }) => {
         setCards(data)
       })
-  }, []);
+      .catch(err => {
+        console.error(err);
+      })
+  }, [setCode]);
 
   return (
     <div className='cardColumn'>

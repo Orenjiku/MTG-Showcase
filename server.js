@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   res.status(200).send('Hello from Server')
 })
 
-app.use('/cards', mtgRouter);
+app.use('/', mtgRouter);
 
 PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`listening on port: ${PORT}`))
