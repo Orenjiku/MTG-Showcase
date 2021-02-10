@@ -11,17 +11,18 @@
   justify-content: center;
   color: white;
   margin-top: 20px;
+  font-size: 60px;
 }
 
 .setSelectorContainer {
   display: flex;
   color: white;
   justify-content: center;
-  margin: 20px 0px;
+  margin: 40px 0px;
 }
 
 .setSelectLabel {
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 .setSelector {

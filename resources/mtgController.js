@@ -48,6 +48,30 @@ module.exports = {
       })
   },
 
+  getBorderlessCards: (req, res) => {
+    const { setCode } = req.params;
+    axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=border=borderless+set=${setCode}`)
+      .then(({ data }) => {
+        res.status(200).json(data.data);
+      })
+      .catch(err => {
+        console.error(err);
+        res.sendStatus(500);
+      })
+  },
+
+  getShowcaseCards: (req, res) => {
+    const { setCode } = req.params;
+    axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=frame=showcase+set=${setCode}`)
+    .then(({ data }) => {
+      res.status(200).json(data.data);
+    })
+    .catch(err => {
+      console.error(err);
+      res.sendStatus(500);
+    })
+  },
+
   getMonoColoredCards: (req, res) => {
   const { setCode, colors } = req.params;
   axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=color=${colors}+set=${setCode}`)

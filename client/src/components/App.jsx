@@ -21,23 +21,24 @@ const App = (props) => {
 
   return (
     <div>
-      <h2 className='siteHeader'>Magic: The Gathering</h2>
-      <div className='setSelectorContainer'>
-        <label className='setSelectLabel'>Select Set:
-          <SetSelector setList={setList} currentSet={currentSetCode} handleChangeSet={setCurrentSetCode} />
-        </label>
-      </div>
+      <div className='siteHeader'>Magic: The Gathering</div>
+      <label className='setSelectorContainer'>
+        <h3 className='setSelectLabel'>Select Set:</h3>
+        <SetSelector setList={setList} currentSet={currentSetCode} handleChangeSet={setCurrentSetCode} />
+      </label>
       <div className='cardColumnsContainer'>
-        <CardColumn colors='white' setCode={currentSetCode} />
-        <CardColumn colors='blue' setCode={currentSetCode}/>
-        <CardColumn colors='black' setCode={currentSetCode} />
-        <CardColumn colors='red' setCode={currentSetCode} />
-        <CardColumn colors='green' setCode={currentSetCode} />
+        <CardColumn attribute='white' setCode={currentSetCode} />
+        <CardColumn attribute='blue' setCode={currentSetCode}/>
+        <CardColumn attribute='black' setCode={currentSetCode} />
+        <CardColumn attribute='red' setCode={currentSetCode} />
+        <CardColumn attribute='green' setCode={currentSetCode} />
       </div>
-      <CardBlock colors='Multicolor' setCode={currentSetCode} />
-      <CardBlock colors='Colorless' setCode={currentSetCode} />
-      <CardBlock type='Land' setCode={currentSetCode} />
-      <CardBlock type='Basic Land' setCode={currentSetCode} />
+      <CardBlock attribute='Multicolor' setCode={currentSetCode} />
+      <CardBlock attribute='Colorless' setCode={currentSetCode} />
+      <CardBlock attribute='Land' setCode={currentSetCode} />
+      <CardBlock attribute='Basic Land' setCode={currentSetCode} />
+      <CardBlock attribute='Borderless' setCode={currentSetCode} />
+      <CardBlock attribute='Showcase' setCode={currentSetCode} />
     </div>
   )
 }
