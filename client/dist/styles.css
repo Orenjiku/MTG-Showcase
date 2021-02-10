@@ -1,11 +1,12 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 .cardColumnsContainer {
   display: grid;
-  grid-template-columns: repeat(5, 260px);
+  grid-template-columns: repeat(5, 240px);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -15,6 +16,18 @@
 
 .cardColumn {
   justify-self: center;
+}
+
+.cardBlockContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cardRow {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .cardImage {
