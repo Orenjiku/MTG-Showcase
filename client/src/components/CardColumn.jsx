@@ -6,7 +6,7 @@ const CardColumn = ({ colors, setCode }) => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    axios.get(`/cards/${setCode}/${colors}`)
+    axios.get(`/cards/${setCode}/${colors}/mono`)
       .then(({ data }) => {
         setCards(data)
       })
@@ -16,6 +16,7 @@ const CardColumn = ({ colors, setCode }) => {
       })
   }, [setCode]);
 
+  console.log(cards)
   return (
     <div className='cardColumn'>
       {cards.map((card, i) => {

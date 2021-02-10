@@ -13,8 +13,8 @@ module.exports = {
   },
 
   getLandCards: (req, res) => {
-    const { setCode } = req.params;
-    axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=set=${setCode}+type=land`)
+    const { setCode, land } = req.params;
+    axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=set=${setCode}${land === 'land' ? '+type=land+-type=basic' : '+type=basic'}`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })

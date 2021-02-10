@@ -35,9 +35,10 @@ const App = (props) => {
         <CardColumn colors='red' setCode={currentSetCode} />
         <CardColumn colors='green' setCode={currentSetCode} />
       </div>
-      <CardBlock colors='multicolor' setCode={currentSetCode} />
-      <CardBlock colors='colorless' setCode={currentSetCode} />
-      <CardBlock colors='land' setCode={currentSetCode} />
+      <CardBlock colors='Multicolor' setCode={currentSetCode} />
+      <CardBlock colors='Colorless' setCode={currentSetCode} />
+      <CardBlock type='Land' setCode={currentSetCode} />
+      <CardBlock type='Basic Land' setCode={currentSetCode} />
     </div>
   )
 }
