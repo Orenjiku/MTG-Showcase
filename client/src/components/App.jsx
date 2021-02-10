@@ -21,12 +21,11 @@ const App = (props) => {
 
   return (
     <div>
-      <h1 className='siteHeader'>
-        Magic: The Gathering
-      </h1>
+      <h2 className='siteHeader'>Magic: The Gathering</h2>
       <div className='setSelectorContainer'>
-        <h3 className='setSelectLabel'>Select Set:</h3>
-        <SetSelector setList={setList} currentSet={currentSetCode} handleChangeSet={setCurrentSetCode} />
+        <label className='setSelectLabel'>Select Set:
+          <SetSelector setList={setList} currentSet={currentSetCode} handleChangeSet={setCurrentSetCode} />
+        </label>
       </div>
       <div className='cardColumnsContainer'>
         <CardColumn colors='white' setCode={currentSetCode} />
