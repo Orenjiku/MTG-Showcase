@@ -22,22 +22,22 @@ const App = (props) => {
   return (
     <div>
       <SetSelector setList={setList} currentSet={currentSetCode} handleChangeSet={setCurrentSetCode} />
-      <div className='cardColumnsContainer'>
+      {/* <div className='cardColumnsContainer'>
         <CardColumn colors='white' setCode={currentSetCode} />
         <CardColumn colors='blue' setCode={currentSetCode}/>
         <CardColumn colors='black' setCode={currentSetCode} />
         <CardColumn colors='red' setCode={currentSetCode} />
         <CardColumn colors='green' setCode={currentSetCode} />
-      </div>
+      </div> */}
       <div className='cardBlockContainer'>
         <CardBlock colors='multicolor' setCode={currentSetCode} />
       </div>
-      <div className='cardBlockContainer'>
+      {/* <div className='cardBlockContainer'>
         <CardBlock colors='colorless' setCode={currentSetCode} />
       </div>
       <div className='cardBlockContainer'>
         <CardBlock colors='land' setCode={currentSetCode} />
-      </div>
+      </div> */}
     </div>
   )
 }

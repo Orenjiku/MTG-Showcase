@@ -15,11 +15,12 @@ const CardBlock = ({ colors, setCode }) => {
       })
   }, [setCode]);
 
+  console.log(cards);
 
   return (
     <div className='cardRow'>
       {cards.map((card, i) => {
-        return <Card key={`${colors}${i}${card.multiverse_ids[0]}`} card={card} />
+          return <Card key={`${colors}${i}${card.multiverse_ids[0]}`} card={card} />
       })}
     </div>
   )

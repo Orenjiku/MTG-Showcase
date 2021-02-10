@@ -35,10 +35,25 @@
   object-fit: cover;
 }
 
-.cardModalContainer {
-  box-sizing: border-box;
+.modal {
   display: flex;
-  /* background-color: transparent; */
   justify-content: center;
   align-items: center;
+}
+
+.cardModalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 0;
+}
+
+.cardModalPrice {
+  font: Arial;
+  color: white;
+  font-size: 20px;
+}
+
+.cardModalPriceButton {
+  background: white;
 }
