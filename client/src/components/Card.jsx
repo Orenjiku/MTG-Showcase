@@ -15,7 +15,9 @@ const Card = ({ card }) => {
           <img alt={card.name} src={card.card_faces?.[0]?.image_uris ? card.card_faces[0].image_uris.large : card.image_uris.large} />
           <img src={card.card_faces?.[1]?.image_uris ? card.card_faces[1].image_uris.large : null} />
           <div className='cardModalPrice'>
-            <a className='cardPrice' href={card.purchase_uris?.tcgplayer} target='_blank'>{card?.prices?.usd ? `$${card.prices.usd}` : null}</a>
+            <a className='cardPrice' href={card.purchase_uris?.tcgplayer} target='_blank'>
+              {card.prices?.usd ? `Normal: $${card.prices.usd}` : card.prices?.usd_foil ? `Foil: $${card.prices.usd_foil}` : null}
+            </a>
           </div>
         </div>
       </Modal>
