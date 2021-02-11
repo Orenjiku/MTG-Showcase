@@ -26,7 +26,7 @@ module.exports = {
 
   getMultiColoredCards: (req, res) => {
     const { setCode } = req.params;
-    axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=color=${'multicolor'}+set=${setCode}+-type=land+-border=borderless+-frame=extendedart`)
+    axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=color=${'multicolor'}+set=${setCode}+-type=land+-border=borderless+-frame=extendedart+-color=white+-color=blue+-color=black+-color=red+-color=green`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })
