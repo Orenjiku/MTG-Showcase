@@ -7,7 +7,7 @@ module.exports = {
       res.status(200).json(data.data);
     })
     .catch(err => {
-      console.error(err);
+      console.error('mtg set request failed');
       res.sendStatus(500);
     })
   },
@@ -19,7 +19,7 @@ module.exports = {
       res.status(200).json(data.data);
     })
     .catch(err => {
-      console.error(err);
+      console.error(`${colors} colored cards request failed`);
       res.sendStatus(500);
     })
   },
@@ -31,7 +31,7 @@ module.exports = {
         res.status(200).json(data.data);
       })
       .catch(err => {
-        console.error(err);
+        console.error('multicolored cards request failed');
         res.sendStatus(500);
       })
   },
@@ -43,7 +43,7 @@ module.exports = {
         res.status(200).json(data.data);
       })
       .catch(err => {
-        console.error(err);
+        console.error('colorless cards request failed');
         res.sendStatus(500);
       })
   },
@@ -55,7 +55,7 @@ module.exports = {
         res.status(200).json(data.data);
       })
       .catch(err => {
-        console.error(err);
+        console.error('borderless cards request failed');
         res.sendStatus(500);
       })
   },
@@ -67,7 +67,7 @@ module.exports = {
         res.status(200).json(data.data);
       })
       .catch(err => {
-        console.error(err);
+        console.error('extended art cards request failed');
         res.sendStatus(500);
       })
   },
@@ -79,7 +79,7 @@ module.exports = {
       res.status(200).json(data.data);
     })
     .catch(err => {
-      console.error(err);
+      console.error('showcase cards request failed');
       res.sendStatus(500);
     })
   },
@@ -91,7 +91,7 @@ module.exports = {
         res.status(200).json(data.data);
       })
       .catch(err => {
-        console.error(err);
+        console.error(`${land} cards request failed`);
         res.sendStatus(500);
       })
   },
