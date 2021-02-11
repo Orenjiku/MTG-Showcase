@@ -105,3 +105,27 @@
 .cardPrice:hover {
   background-color: lightskyblue;
 }
+
+.scrollButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px;
+}
+
+.scrollButton {
+  all: initial;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.scrollButton:hover {
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: lightblue;
+  color: black;
+}

@@ -19,6 +19,13 @@ const App = (props) => {
       })
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
   return (
     <div>
       <div className='siteHeader'>Magic: The Gathering</div>
@@ -38,7 +45,11 @@ const App = (props) => {
       <CardBlock attribute='Land' setCode={currentSetCode} />
       <CardBlock attribute='Basic Land' setCode={currentSetCode} />
       <CardBlock attribute='Borderless' setCode={currentSetCode} />
+      <CardBlock attribute='ExtendedArt' setCode={currentSetCode} />
       <CardBlock attribute='Showcase' setCode={currentSetCode} />
+      <div className='scrollButtonContainer'>
+        <input className='scrollButton' type='button' value='Back to Top' onClick={scrollToTop} />
+      </div>
     </div>
   )
 }
