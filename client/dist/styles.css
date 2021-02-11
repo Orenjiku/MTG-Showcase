@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  background-color: black;
+}
+
+.siteHeader {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+  font-size: 60px;
+}
+
+.setSelectorContainer {
+  display: flex;
+  color: white;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+.setSelectLabel {
+  margin-right: 10px;
+}
+
+.setSelector {
+  background-color: white;
+}
+
+.sectionLabel {
+  color: white;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.cardColumnsContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 240px);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.cardColumn {
+  justify-self: center;
+}
+
+.cardBlockContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.cardRow {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardImage {
+  width: 240px;
+  object-fit: cover;
+}
+
+.cardImage:hover {
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.cardModalContainer {
+  justify-content: center;
+  align-items: center;
+  outline: 0;
+}
+
+.cardModalPrice {
+  text-align: center;
+  outline: 0;
+
+}
+
+.cardPrice {
+  color: black;
+  font-size: 25px;
+  background-color: white;
+  text-decoration: none;
+  display: block;
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+  height: 1.5em;
+}
+
+.cardPrice:hover {
+  background-color: lightskyblue;
+}
+
+.scrollButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px;
+}
+
+.scrollButton {
+  all: initial;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.scrollButton:hover {
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: lightblue;
+  color: black;
+}
