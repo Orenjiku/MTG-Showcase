@@ -16,6 +16,7 @@ const CardBlock = ({attribute, setCode}) => {
       })
   }, [setCode]);
 
+
   return (
     <div>
       {cards.length === 0 ? null : <h3 className='sectionLabel'>{attribute}</h3>}
