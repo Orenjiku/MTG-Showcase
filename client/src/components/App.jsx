@@ -3,6 +3,7 @@ import axios from 'axios';
 import SetSelector from './SetSelector.jsx';
 import CardColumn from './CardColumn.jsx';
 import CardBlock from './CardBlock.jsx';
+import '../styles.css';
 
 const App = (props) => {
 
