@@ -1,8 +1,10 @@
 const axios = require('axios');
+const url = 'https://api.scryfall.com';
+const cardUrl = `${url}/cards/search?order=rarity&dir=desc`
 
 module.exports = {
   getSets: (req, res) => {
-    axios.get(`https://api.scryfall.com/sets/`)
+    axios.get(`${url}/sets/`)
     .then(({ data }) => {
       res.status(200).json(data.data);
     })
@@ -14,7 +16,7 @@ module.exports = {
 
   getMonoColoredCards: (req, res) => {
   const { setCode, colors } = req.params;
-  axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=color=${colors}+set=${setCode}`)
+  axios.get(`${cardUrl}&q=color=${colors}+set=${setCode}`)
     .then(({ data }) => {
       res.status(200).json(data.data);
     })
@@ -26,7 +28,7 @@ module.exports = {
 
   getMultiColoredCards: (req, res) => {
     const { setCode } = req.params;
-    axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=color=${'multicolor'}+set=${setCode}+-type=land+-border=borderless+-frame=extendedart+-color=white+-color=blue+-color=black+-color=red+-color=green`)
+    axios.get(`${cardUrl}&q=color=${'multicolor'}+set=${setCode}+-type=land+-border=borderless+-frame=extendedart+-color=white+-color=blue+-color=black+-color=red+-color=green`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })
@@ -38,7 +40,7 @@ module.exports = {
 
   getColorlessCards: (req, res) => {
     const { setCode } = req.params;
-    axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=color=${'colorless'}+set=${setCode}+-type=land`)
+    axios.get(`${cardUrl}&q=color=${'colorless'}+set=${setCode}+-type=land`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })
@@ -50,7 +52,7 @@ module.exports = {
 
   getBorderlessCards: (req, res) => {
     const { setCode } = req.params;
-    axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=border=borderless+set=${setCode}+-frame=extendedart+-frame=showcase`)
+    axios.get(`${cardUrl}&q=border=borderless+set=${setCode}+-frame=extendedart+-frame=showcase`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })
@@ -62,7 +64,7 @@ module.exports = {
 
   getExtendedArtCards: (req, res) => {
     const { setCode } = req.params;
-    axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=frame=extendedart+set=${setCode}+-border=borderless+-frame=showcase`)
+    axios.get(`${cardUrl}&q=frame=extendedart+set=${setCode}+-border=borderless+-frame=showcase`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })
@@ -74,7 +76,7 @@ module.exports = {
 
   getShowcaseCards: (req, res) => {
     const { setCode } = req.params;
-    axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=frame=showcase+set=${setCode}`)
+    axios.get(`${url}/cards/search?order=rarity&dir=desc&q=frame=showcase+set=${setCode}`)
     .then(({ data }) => {
       res.status(200).json(data.data);
     })
@@ -86,7 +88,7 @@ module.exports = {
 
   getLandCards: (req, res) => {
     const { setCode, land } = req.params;
-    axios.get(`https://api.scryfall.com/cards/search?order=rarity&dir=desc&q=set=${setCode}${land === 'land' ? '+type=land+-type=basic+-border=borderless' : '+type=basic'}`)
+    axios.get(`${cardUrl}&q=set=${setCode}${land === 'land' ? '+type=land+-type=basic+-border=borderless' : '+type=basic'}`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })
