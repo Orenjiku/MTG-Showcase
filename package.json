@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "heroku-postbuild": "webpack --mode production",
     "build-prod": "webpack --mode production",
     "build-dev": "webpack -w --mode development",
     "start": "nodemon server.js"
