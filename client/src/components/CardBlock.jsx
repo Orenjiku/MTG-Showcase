@@ -17,14 +17,12 @@ const CardBlock = ({attribute, setCode}) => {
   }, [setCode]);
 
   return (
-    <div>
+    <div className='cardBlockContainer'>
       {cards.length === 0 ? null : <h3 className='sectionLabel'>{attribute}</h3>}
-      <div className='cardBlockContainer'>
-        <div className='cardRow'>
-          {cards.map((card, i) => {
-              return <Card key={`${attribute}%${i}${card.multiverse_ids[0]}`} card={card} />
-          })}
-        </div>
+      <div className='cardBlock'>
+        {cards.map((card, i) => {
+            return <Card key={`${attribute}%${i}${card.multiverse_ids[0]}`} card={card} />
+        })}
       </div>
     </div>
   )

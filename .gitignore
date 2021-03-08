@@ -4,7 +4,7 @@ logs
 npm-debug.log*
 
 # webpack distribution bundles
-*bundle.js*
+bundle.js*
 
 # Dependency directories
 node_modules/

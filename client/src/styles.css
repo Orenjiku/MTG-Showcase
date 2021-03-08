@@ -29,6 +29,30 @@
   background-color: white;
 }
 
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+.innerContainer {
+  grid-column: 2 / 3;
+}
+
+.cardColumnsContainer {
+  display: grid;
+  grid-template-rows: auto, auto;
+  grid-template-columns: repeat(5, max(20%));
+}
+
+.cardImage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.cardBlockContainer {
+  grid-template-rows: auto, auto;
+}
+
 .sectionLabel {
   color: white;
   margin-top: 40px;
@@ -36,44 +60,11 @@
   justify-content: center;
 }
 
-.cardsContainer {
+.cardBlock {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: repeat(5, max(20%))
 }
 
-.cardColumnsContainer {
-  display: grid;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-template-columns: repeat(5, auto);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  justify-content: center;
-  justify-items: center;
-}
-
-.cardColumn {
-  width: 100%;
-  justify-self: center;
-}
-
-.cardBlockContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.cardRow {
-  width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.cardImage {
-  width: 100%;
-  object-fit: cover;
-}
 
 .cardImage:hover {
   cursor: pointer;

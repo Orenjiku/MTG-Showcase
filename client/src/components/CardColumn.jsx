@@ -17,7 +17,7 @@ const CardColumn = ({ attribute, setCode }) => {
   }, [setCode]);
 
   return (
-    <div className='cardColumn'>
+    <div>
       {cards.map((card, i) => {
         return <Card key={`${attribute}${i}${card.multiverse_ids[0]}`} card={card} />
       })}
