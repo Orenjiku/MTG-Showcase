@@ -34,8 +34,8 @@ const App = (props) => {
         <h3 className='setSelectLabel'>Select Set:</h3>
         <SetSelector setList={setList} currentSet={currentSetCode} handleChangeSet={setCurrentSetCode} />
       </label>
-      <div className='mainContainer'>
-        <div className='innerContainer'>
+      <div className='mainCardContainer'>
+        <div className='innerCardContainer'>
           <div className='cardColumnsContainer'>
             <CardColumn attribute='white' setCode={currentSetCode} />
             <CardColumn attribute='blue' setCode={currentSetCode} />

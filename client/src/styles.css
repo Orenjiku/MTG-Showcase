@@ -29,12 +29,12 @@
   background-color: white;
 }
 
-.mainContainer {
+.mainCardContainer {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
 }
 
-.innerContainer {
+.innerCardContainer {
   grid-column: 2 / 3;
 }
 
@@ -50,14 +50,16 @@
 }
 
 .cardBlockContainer {
+  display: grid;
   grid-template-rows: auto, auto;
 }
 
 .sectionLabel {
-  color: white;
-  margin-top: 40px;
   display: flex;
   justify-content: center;
+  font-size: 1.75vw;
+  color: white;
+  margin: 4vw 0vw 2vw 0vw;
 }
 
 .cardBlock {
