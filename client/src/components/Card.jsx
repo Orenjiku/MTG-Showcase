@@ -25,7 +25,7 @@ const Card = ({ card }) => {
         </div>
       </Modal>
     </div>
-  )
-}
+  );
+};
 
 export default Card;

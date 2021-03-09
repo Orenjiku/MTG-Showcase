@@ -41,7 +41,6 @@
 
 .innerCardContainer {
   grid-column: 2 / 3;
-  min-height: 80vh;
 }
 
 .cardColumnsContainer {

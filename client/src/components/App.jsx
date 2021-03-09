@@ -16,8 +16,8 @@ const App = (props) => {
         setSetList(data);
       })
       .catch(err => {
-        console.log('Unable to get MTG sets')
-      })
+        console.log('Unable to get MTG sets');
+      });
   }, []);
 
   const scrollToTop = () => {
@@ -25,7 +25,7 @@ const App = (props) => {
       top: 0,
       behavior: 'smooth'
     });
-  }
+  };
 
   return (
     <div className='mainContainer'>
@@ -54,7 +54,7 @@ const App = (props) => {
         <input className='scrollButton' type='button' value='Back to Top' onClick={scrollToTop} />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default App;

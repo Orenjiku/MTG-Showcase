@@ -12,8 +12,8 @@ const CardBlock = ({attribute, setCode}) => {
       })
       .catch(err => {
         setCards([]);
-        console.log(`No ${colors} cards found in this set.`);
-      })
+        console.log(`No ${attribute} cards found in this set.`);
+      });
   }, [setCode]);
 
   return (
@@ -21,11 +21,11 @@ const CardBlock = ({attribute, setCode}) => {
       {cards.length === 0 ? null : <h3 className='sectionLabel'>{attribute}</h3>}
       <div className='cardBlock'>
         {cards.map((card, i) => {
-            return <Card key={`${attribute}%${i}${card.multiverse_ids[0]}`} card={card} />
+          return <Card key={`${attribute}%${i}${card.multiverse_ids[0]}`} card={card} />;
         })}
       </div>
     </div>
-  )
+  );
 };
 
 export default CardBlock;
