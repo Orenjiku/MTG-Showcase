@@ -68,8 +68,9 @@
 }
 
 .cardImage {
+  /* min-height: 400px; */
   height: auto;
-  width: 100%;
+  max-width: 100%;
   object-fit: cover;
 }
 
@@ -102,7 +103,7 @@
   color: black;
 }
 
-.modal {
+/* .modal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,6 +145,61 @@
   border-bottom-right-radius: 4vh;
   line-height: 4vh;
   height: 4vh;
+}
+
+.cardPrice:hover {
+  background-color: lightskyblue;
+} */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+}
+
+.modalContainer {
+  display: block;
+  outline: 0;
+  background-color: transparent;
+}
+
+.modalInnerContainer {
+  display: block;
+  max-width: 50vw;
+  background-color: transparent;
+}
+
+.modalCardContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  max-height: 85vh;
+  max-width: 50vw;
+}
+
+.cardModalPrice {
+  display: flex;
+  width: 100%;
+  max-width: 100vw;
+  justify-content: center;
+  text-align: center;
+  background-color: transparent;
+}
+
+.cardPrice {
+  width: 80%;
+  color: black;
+  font-size: 1.5vw;
+  background-color: white;
+  text-decoration: none;
+  border-bottom-left-radius: 3vw;
+  border-bottom-right-radius: 3vw;
+  line-height: 2.5vw;
+  height: 2.5vw;
 }
 
 .cardPrice:hover {
