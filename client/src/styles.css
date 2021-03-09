@@ -191,15 +191,15 @@
 }
 
 .cardPrice {
-  width: 85%;
+  width: 80%;
   color: black;
-  font-size: 2.5vh;
+  font-size: 1.5vw;
   background-color: white;
   text-decoration: none;
-  border-bottom-left-radius: 4vh;
-  border-bottom-right-radius: 4vh;
-  line-height: 4vh;
-  height: 4vh;
+  border-bottom-left-radius: 3vw;
+  border-bottom-right-radius: 3vw;
+  line-height: 2.5vw;
+  height: 2.5vw;
 }
 
 .cardPrice:hover {
