@@ -21,11 +21,11 @@ module.exports = {
             '@babel/preset-env',
             '@babel/preset-react'
           ],
-          // plugins: [
-          //   '@babel/transform-runtime'
-          // ]
         }
-      },
+      }, {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
     ]
   },
   resolve: {
