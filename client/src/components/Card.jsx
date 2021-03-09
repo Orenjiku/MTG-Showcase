@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from '@material-ui/core/Modal';
 
-const Card = ({ card }) => {
+const Card = ({ card, loading='eager' }) => {
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -9,7 +9,7 @@ const Card = ({ card }) => {
 
   return (
     <div>
-      <img className='cardImage' loading={'lazy'} alt={card.name} src={card.image_uris ? card.image_uris.border_crop : card.card_faces[0].image_uris.border_crop} onClick={handleOpen}/>
+      <img className='cardImage' loading={loading} alt={card.name} src={card.image_uris ? card.image_uris.border_crop : card.card_faces[0].image_uris.border_crop} onClick={handleOpen}/>
       <Modal className='modal' open={open} onClose={handleClose} aria-labelledby={card.name}>
         <div className='cardModalContainer' onClick={handleClose}>
           <div className='cardModalImage'>

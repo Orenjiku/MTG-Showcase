@@ -21,7 +21,7 @@ const CardBlock = ({attribute, setCode}) => {
       {cards.length === 0 ? null : <h3 className='sectionLabel'>{attribute}</h3>}
       <div className='cardBlock'>
         {cards.map((card, i) => {
-          return <Card key={`${attribute}%${i}${card.multiverse_ids[0]}`} card={card} />;
+          return <Card key={`${attribute}%${i}${card.multiverse_ids[0]}`} card={card} loading={'lazy'}/>;
         })}
       </div>
     </div>
