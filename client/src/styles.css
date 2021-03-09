@@ -76,40 +76,6 @@
   cursor: pointer;
 }
 
-.modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-}
-
-.cardModalContainer {
-  justify-content: center;
-  align-items: center;
-  outline: 0;
-}
-
-.cardModalPrice {
-  text-align: center;
-  outline: 0;
-
-}
-
-.cardPrice {
-  color: black;
-  font-size: 25px;
-  background-color: white;
-  text-decoration: none;
-  display: block;
-  border-bottom-left-radius: 2em;
-  border-bottom-right-radius: 2em;
-  height: 1.5em;
-}
-
-.cardPrice:hover {
-  background-color: lightskyblue;
-}
-
 .scrollButtonContainer {
   grid-column: 2 / 3;
   display: flex;
@@ -133,4 +99,52 @@
   cursor: pointer;
   background-color: lightblue;
   color: black;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+}
+
+.cardModalContainer {
+  display: block;
+  margin: auto;
+  max-width: 25vw;
+  outline: 0;
+  border-bottom-left-radius: 4vh;
+  border-bottom-right-radius: 4vh;
+}
+
+.cardModalImage {
+  display: flex;
+  justify-content: center;
+  height: 85vh;
+  width: 100%;
+}
+
+.cardModalPrice {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  border-bottom-left-radius: 4vh;
+  border-bottom-right-radius: 4vh;
+}
+
+.cardPrice {
+  width: 100%;
+  color: black;
+  font-size: 2.5vh;
+  background-color: white;
+  text-decoration: none;
+  border-bottom-left-radius: 4vh;
+  border-bottom-right-radius: 4vh;
+  line-height: 4vh;
+  height: 4vh;
+}
+
+.cardPrice:hover {
+  background-color: lightskyblue;
 }
