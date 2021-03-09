@@ -28,7 +28,6 @@ const App = (props) => {
   }
 
   return (
-    // <div>
     <div className='mainContainer'>
       <div className='siteHeader'>Magic: The Gathering</div>
       <label className='setSelectorContainer'>

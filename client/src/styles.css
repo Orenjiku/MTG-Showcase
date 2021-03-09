@@ -41,6 +41,7 @@
 
 .innerCardContainer {
   grid-column: 2 / 3;
+  min-height: 80vh;
 }
 
 .cardColumnsContainer {
@@ -68,8 +69,8 @@
 }
 
 .cardImage {
+  height: auto;
   width: 100%;
-  object-fit: cover;
 }
 
 .cardImage:hover {
