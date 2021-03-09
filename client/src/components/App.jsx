@@ -3,6 +3,7 @@ import axios from 'axios';
 import SetSelector from './SetSelector.jsx';
 import CardColumn from './CardColumn.jsx';
 import CardBlock from './CardBlock.jsx';
+import ScrollButton from './ScrollButton.jsx';
 import '../styles.css';
 
 const App = (props) => {
@@ -16,8 +17,8 @@ const App = (props) => {
         setSetList(data);
       })
       .catch(err => {
-        console.log('Unable to get MTG sets')
-      })
+        console.log('Unable to get MTG sets');
+      });
   }, []);
 
   const scrollToTop = () => {
@@ -25,10 +26,9 @@ const App = (props) => {
       top: 0,
       behavior: 'smooth'
     });
-  }
+  };
 
   return (
-    // <div>
     <div className='mainContainer'>
       <div className='siteHeader'>Magic: The Gathering</div>
       <label className='setSelectorContainer'>
@@ -51,11 +51,9 @@ const App = (props) => {
         <CardBlock attribute='ExtendedArt' setCode={currentSetCode} />
         <CardBlock attribute='Showcase' setCode={currentSetCode} />
       </div>
-      <div className='scrollButtonContainer'>
-        <input className='scrollButton' type='button' value='Back to Top' onClick={scrollToTop} />
-      </div>
+      <ScrollButton scrollToTop={scrollToTop} />
     </div>
-  )
-}
+  );
+};
 
 export default App;

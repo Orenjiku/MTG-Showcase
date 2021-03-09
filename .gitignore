@@ -1,14 +1,10 @@
-# Logs
-logs
-*.log
-npm-debug.log*
+package-lock.json
 
 # webpack distribution bundles
 bundle.js*
 
 # Dependency directories
 node_modules/
-jspm_packages/
 
 # dotenv environment variables file
 .env
