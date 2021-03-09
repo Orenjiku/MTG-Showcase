@@ -9,7 +9,7 @@ const Card = ({ card }) => {
 
   return (
     <div>
-      <img className='cardImage' alt={card.name} src={card.image_uris ? card.image_uris.border_crop : card.card_faces[0].image_uris.border_crop} onClick={handleOpen}/>
+      <img className='cardImage' loading={'lazy'} alt={card.name} src={card.image_uris ? card.image_uris.border_crop : card.card_faces[0].image_uris.border_crop} onClick={handleOpen}/>
       <Modal className='modal' open={open} onClose={handleClose} aria-labelledby={card.name}>
         <div className='cardModalContainer' onClick={handleClose}>
           <div className='cardModalImage'>
