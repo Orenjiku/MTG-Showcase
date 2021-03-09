@@ -3,6 +3,7 @@ import axios from 'axios';
 import SetSelector from './SetSelector.jsx';
 import CardColumn from './CardColumn.jsx';
 import CardBlock from './CardBlock.jsx';
+import ScrollButton from './ScrollButton.jsx';
 import '../styles.css';
 
 const App = (props) => {
@@ -50,9 +51,7 @@ const App = (props) => {
         <CardBlock attribute='ExtendedArt' setCode={currentSetCode} />
         <CardBlock attribute='Showcase' setCode={currentSetCode} />
       </div>
-      <div className='scrollButtonContainer'>
-        <input className='scrollButton' type='button' value='Back to Top' onClick={scrollToTop} />
-      </div>
+      <ScrollButton scrollToTop={scrollToTop} />
     </div>
   );
 };

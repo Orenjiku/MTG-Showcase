@@ -1,29 +1,29 @@
 const axios = require('axios');
 const url = 'https://api.scryfall.com';
-const cardUrl = `${url}/cards/search?order=rarity&dir=desc`
+const cardUrl = `${url}/cards/search?order=rarity&dir=desc`;
 
 module.exports = {
   getSets: (req, res) => {
     axios.get(`${url}/sets/`)
-    .then(({ data }) => {
-      res.status(200).json(data.data);
-    })
-    .catch(err => {
-      console.error('mtg set request failed');
-      res.sendStatus(500);
-    })
+      .then(({ data }) => {
+        res.status(200).json(data.data);
+      })
+      .catch(err => {
+        console.error('mtg set request failed');
+        res.sendStatus(500);
+      });
   },
 
   getMonoColoredCards: (req, res) => {
-  const { setCode, colors } = req.params;
-  axios.get(`${cardUrl}&q=color=${colors}+set=${setCode}`)
-    .then(({ data }) => {
-      res.status(200).json(data.data);
-    })
-    .catch(err => {
-      console.error(`${colors} colored cards request failed`);
-      res.sendStatus(500);
-    })
+    const { setCode, colors } = req.params;
+    axios.get(`${cardUrl}&q=color=${colors}+set=${setCode}`)
+      .then(({ data }) => {
+        res.status(200).json(data.data);
+      })
+      .catch(err => {
+        console.error(`${colors} colored cards request failed`);
+        res.sendStatus(500);
+      });
   },
 
   getMultiColoredCards: (req, res) => {
@@ -35,7 +35,7 @@ module.exports = {
       .catch(err => {
         console.error('multicolored cards request failed');
         res.sendStatus(500);
-      })
+      });
   },
 
   getColorlessCards: (req, res) => {
@@ -47,7 +47,7 @@ module.exports = {
       .catch(err => {
         console.error('colorless cards request failed');
         res.sendStatus(500);
-      })
+      });
   },
 
   getBorderlessCards: (req, res) => {
@@ -59,7 +59,7 @@ module.exports = {
       .catch(err => {
         console.error('borderless cards request failed');
         res.sendStatus(500);
-      })
+      });
   },
 
   getExtendedArtCards: (req, res) => {
@@ -71,19 +71,19 @@ module.exports = {
       .catch(err => {
         console.error('extended art cards request failed');
         res.sendStatus(500);
-      })
+      });
   },
 
   getShowcaseCards: (req, res) => {
     const { setCode } = req.params;
     axios.get(`${url}/cards/search?order=rarity&dir=desc&q=frame=showcase+set=${setCode}`)
-    .then(({ data }) => {
-      res.status(200).json(data.data);
-    })
-    .catch(err => {
-      console.error('showcase cards request failed');
-      res.sendStatus(500);
-    })
+      .then(({ data }) => {
+        res.status(200).json(data.data);
+      })
+      .catch(err => {
+        console.error('showcase cards request failed');
+        res.sendStatus(500);
+      });
   },
 
   getLandCards: (req, res) => {
@@ -95,7 +95,7 @@ module.exports = {
       .catch(err => {
         console.error(`${land} cards request failed`);
         res.sendStatus(500);
-      })
+      });
   },
 
-}
+};
