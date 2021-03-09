@@ -6,32 +6,37 @@
   background-color: black;
 }
 
+.mainContainer {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
 .siteHeader {
+  grid-column: 2 / 3;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 4vw;
   color: white;
-  margin-top: 20px;
-  font-size: 60px;
+  margin: 2vw 0vw;
 }
 
 .setSelectorContainer {
+  grid-column: 2 / 3;
   display: flex;
-  color: white;
   justify-content: center;
-  margin: 40px 0px;
+  align-items: center;
+  color: white;
+  margin-bottom: 3vw;
 }
 
 .setSelectLabel {
-  margin-right: 10px;
+  font-size: 0.9vw;
+  margin-right: 0.8vw;
 }
 
 .setSelector {
   background-color: white;
-}
-
-.mainCardContainer {
-  display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
 }
 
 .innerCardContainer {
@@ -42,11 +47,6 @@
   display: grid;
   grid-template-rows: auto, auto;
   grid-template-columns: repeat(5, max(20%));
-}
-
-.cardImage {
-  width: 100%;
-  object-fit: cover;
 }
 
 .cardBlockContainer {
@@ -67,6 +67,10 @@
   grid-template-columns: repeat(5, max(20%))
 }
 
+.cardImage {
+  width: 100%;
+  object-fit: cover;
+}
 
 .cardImage:hover {
   cursor: pointer;
@@ -107,10 +111,11 @@
 }
 
 .scrollButtonContainer {
+  grid-column: 2 / 3;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 0px;
+  margin: 4vw 0vw;
 }
 
 .scrollButton {
@@ -118,9 +123,9 @@
   box-sizing: border-box;
   background-color: white;
   font-family: Arial;
-  font-size: 20px;
-  padding: 10px 15px;
-  border-radius: 5px;
+  font-size: 1vw;
+  padding: 0.6vw 1.5vw;
+  border-radius: 0.6vw;
 }
 
 .scrollButton:hover {
