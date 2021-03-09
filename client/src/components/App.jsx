@@ -28,34 +28,33 @@ const App = (props) => {
   }
 
   return (
-    <div>
+    // <div>
+    <div className='mainContainer'>
       <div className='siteHeader'>Magic: The Gathering</div>
       <label className='setSelectorContainer'>
         <h3 className='setSelectLabel'>Select Set:</h3>
         <SetSelector setList={setList} currentSet={currentSetCode} handleChangeSet={setCurrentSetCode} />
       </label>
-      <div className='mainCardContainer'>
-        <div className='innerCardContainer'>
-          <div className='cardColumnsContainer'>
-            <CardColumn attribute='white' setCode={currentSetCode} />
-            <CardColumn attribute='blue' setCode={currentSetCode} />
-            <CardColumn attribute='black' setCode={currentSetCode} />
-            <CardColumn attribute='red' setCode={currentSetCode} />
-            <CardColumn attribute='green' setCode={currentSetCode} />
-          </div>
-          <CardBlock attribute='Multicolor' setCode={currentSetCode} />
-          <CardBlock attribute='Colorless' setCode={currentSetCode} />
-          <CardBlock attribute='Land' setCode={currentSetCode} />
-          <CardBlock attribute='Basic Land' setCode={currentSetCode} />
-          <CardBlock attribute='Borderless' setCode={currentSetCode} />
-          <CardBlock attribute='ExtendedArt' setCode={currentSetCode} />
-          <CardBlock attribute='Showcase' setCode={currentSetCode} />
+      <div className='innerCardContainer'>
+        <div className='cardColumnsContainer'>
+          <CardColumn attribute='white' setCode={currentSetCode} />
+          <CardColumn attribute='blue' setCode={currentSetCode} />
+          <CardColumn attribute='black' setCode={currentSetCode} />
+          <CardColumn attribute='red' setCode={currentSetCode} />
+          <CardColumn attribute='green' setCode={currentSetCode} />
         </div>
+        <CardBlock attribute='Multicolor' setCode={currentSetCode} />
+        <CardBlock attribute='Colorless' setCode={currentSetCode} />
+        <CardBlock attribute='Land' setCode={currentSetCode} />
+        <CardBlock attribute='Basic Land' setCode={currentSetCode} />
+        <CardBlock attribute='Borderless' setCode={currentSetCode} />
+        <CardBlock attribute='ExtendedArt' setCode={currentSetCode} />
+        <CardBlock attribute='Showcase' setCode={currentSetCode} />
       </div>
-        <div className='scrollButtonContainer'>
-          <input className='scrollButton' type='button' value='Back to Top' onClick={scrollToTop} />
-        </div>
+      <div className='scrollButtonContainer'>
+        <input className='scrollButton' type='button' value='Back to Top' onClick={scrollToTop} />
       </div>
+    </div>
   )
 }
 
