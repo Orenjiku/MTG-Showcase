@@ -4,6 +4,7 @@ import SetSelector from './SetSelector.jsx';
 import CardColumn from './CardColumn.jsx';
 import CardBlock from './CardBlock.jsx';
 import ScrollButton from './ScrollButton.jsx';
+import LazyLoad from 'react-lazyload';
 import '../styles.css';
 
 const App = (props) => {
