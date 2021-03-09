@@ -7,11 +7,6 @@ const Card = ({ card, loading='eager' }) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  //get cardColumnContainer width and divide by 5
-  //set min-height = width * 1.4
-  // let width = $('.cardColumnsContainer').width();
-  // console.log(width)
-
   return (
     <div>
       <img className='cardImage' loading={loading} alt={card.name} src={card.image_uris ? card.image_uris.border_crop : card.card_faces[0].image_uris.border_crop} onClick={handleOpen}/>
