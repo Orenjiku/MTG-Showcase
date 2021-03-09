@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './Card.jsx';
+import $ from 'jquery';
 
 const CardColumn = ({ attribute, setCode }) => {
   const [cards, setCards] = useState([]);
+  let width = $('.cardColumnsContainer').width();
+  let cardHeight = width * 1.4;
 
   useEffect(() => {
     axios.get(`/cards/${setCode}/mono/${attribute}`)
