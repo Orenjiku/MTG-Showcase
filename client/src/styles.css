@@ -73,9 +73,16 @@
   grid-template-columns: repeat(5, max(20%))
 }
 
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cardImage {
   height: auto;
-  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 12 / 17;
   object-fit: cover;
 }
 

@@ -6,9 +6,12 @@ const Card = ({ card, loading='eager' }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  // let width = (window.innerWidth * 6/8) / 5
+  // let height = `${width * 680/480}px`;
+  // style={{'max-height': height}}
 
   return (
-    <div>
+    <div className='cardContainer'>
       <img className='cardImage' loading={loading} alt={card.name} src={card.image_uris ? card.image_uris.border_crop : card.card_faces[0].image_uris.border_crop} onClick={handleOpen}/>
       <Modal className='modal' open={open} onClose={handleClose} aria-labelledby={card.name}>
         <div className='modalContainer' onClick={handleClose}>
