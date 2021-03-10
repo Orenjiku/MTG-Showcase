@@ -154,7 +154,7 @@
 }
 
 /* for phones */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
   .modalInnerContainer {
     display: block;
     background-color: transparent;
