@@ -3,22 +3,21 @@
   margin: 0;
   padding: 0;
   font-family: Arial;
+  background-color: black;
 }
 
 .mainContainer {
   display: flex;
   justify-content: center;
-  background-color: black;
 }
 
 .gridContainer {
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
   max-width: 1800px;
-  background-color: black;
 }
 
-.innerGridContainer {
+.innerContainer {
   grid-column: 2 / 3;
 }
 
@@ -47,6 +46,7 @@
 .setSelector {
   font-size: 0.8vw;
   border-radius: 5px;
+  background-color: white;
 }
 
 .cardColumnsContainer {
@@ -79,14 +79,14 @@
   align-items: center;
 }
 
-.cardImage {
+.card {
   height: auto;
   width: 100%;
   aspect-ratio: 12 / 17;
   object-fit: cover;
 }
 
-.cardImage:hover {
+.card:hover {
   cursor: pointer;
 }
 
@@ -138,9 +138,14 @@
   justify-content: center;
 }
 
-.card {
+.SingleFacedCard {
   max-height: 85vh;
-  max-width: 50vw;
+  max-width: 85vw;
+}
+
+.DoubleFacedCard {
+  max-height: 85vh;
+  max-width: 45vw;
 }
 
 .cardModalPrice {

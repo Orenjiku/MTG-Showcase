@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from './Header.jsx';
+import Header from './header/Header.jsx';
 import CardColumn from './CardColumn.jsx';
 import CardBlock from './CardBlock.jsx';
 import ScrollButton from './ScrollButton.jsx';
@@ -10,6 +10,7 @@ const App = (props) => {
 
   const [setList, setSetList] = useState([]);
   const [currentSetCode, setCurrentSetCode] = useState('khm');
+  let showScrollButton = true;
 
   useEffect(() => {
     axios.get('/sets')
@@ -21,6 +22,13 @@ const App = (props) => {
       });
   }, []);
 
+  // useEffect(() => {
+  //   setTimeout(()=> {
+  //     let component = document.getElementsByClassName('mainContainer');
+  //     console.log(window.innerHeight);
+  //   }, 5000);
+  // }, [setList]);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -31,7 +39,7 @@ const App = (props) => {
   return (
     <div className='mainContainer'>
       <div className='gridContainer'>
-        <div className='innerGridContainer'>
+        <div className='innerContainer'>
           <Header setList={setList} currentSetCode={currentSetCode} setCurrentSetCode={setCurrentSetCode} />
           <div className='cardColumnsContainer'>
             <CardColumn attribute='white' setCode={currentSetCode} />
@@ -47,7 +55,7 @@ const App = (props) => {
           <CardBlock attribute='Borderless' setCode={currentSetCode} />
           <CardBlock attribute='ExtendedArt' setCode={currentSetCode} />
           <CardBlock attribute='Showcase' setCode={currentSetCode} />
-          <ScrollButton scrollToTop={scrollToTop} />
+          <ScrollButton scrollToTop={scrollToTop} showScrollButton={showScrollButton} />
         </div>
       </div>
     </div>
