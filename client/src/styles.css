@@ -27,7 +27,6 @@
   font-size: calc(30px + 2vw);
   color: white;
   margin: 2vw 0vw;
-  min-width: 575px;
 }
 
 .setSelectorContainer {
@@ -37,7 +36,6 @@
   align-items: center;
   color: white;
   margin-bottom: 3vw;
-  min-width: 575px;
 }
 
 .setSelectLabel {
