@@ -6,11 +6,17 @@
 }
 
 .mainContainer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.gridContainer {
   display: grid;
   background-color: black;
   grid-template-columns: 1fr 5fr 1fr;
   justify-content: center;
-  min-width: 680px;
+  max-width: 1800px;
 }
 
 .siteHeader {
@@ -18,9 +24,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4vw;
+  font-size: calc(30px + 2vw);
   color: white;
   margin: 2vw 0vw;
+  min-width: 575px;
 }
 
 .setSelectorContainer {
@@ -30,16 +37,16 @@
   align-items: center;
   color: white;
   margin-bottom: 3vw;
+  min-width: 575px;
 }
 
 .setSelectLabel {
-  font-size: 18px;
-  margin-right: 10px;
+  font-size: calc(14px + 0.2vw);
+  margin-right: calc(14px + 0.2vw);
 }
 
 .setSelector {
-  font-size: 16px;
-  height: 25px;
+  font-size: calc(14px + 0.2vw);
   border-radius: 5px;
 }
 
@@ -61,7 +68,7 @@
 .sectionLabel {
   display: flex;
   justify-content: center;
-  font-size: 1.75vw;
+  font-size: calc(14px + 0.8vw);
   color: white;
   margin: 4vw 0vw 2vw 0vw;
 }
