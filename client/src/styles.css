@@ -24,7 +24,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(30px + 2vw);
+  /* font-size: calc(30px + 2vw); */
+  font-size: 4vw;
   color: white;
   margin: 2vw 0vw;
 }
@@ -39,12 +40,12 @@
 }
 
 .setSelectLabel {
-  font-size: calc(14px + 0.2vw);
-  margin-right: calc(14px + 0.2vw);
+  font-size: 1.5vw;
+  margin-right: 1vw;
 }
 
 .setSelector {
-  font-size: calc(14px + 0.2vw);
+  font-size: 1.25vw;
   border-radius: 5px;
 }
 
@@ -66,7 +67,7 @@
 .sectionLabel {
   display: flex;
   justify-content: center;
-  font-size: calc(14px + 0.8vw);
+  font-size: 2vw;
   color: white;
   margin: 4vw 0vw 2vw 0vw;
 }
@@ -151,13 +152,13 @@
 .cardPrice {
   width: 80%;
   color: black;
-  font-size: 1.5em;
+  font-size: 1.5vw;
   background-color: white;
   text-decoration: none;
   border-bottom-left-radius: 3vw;
   border-bottom-right-radius: 3vw;
-  line-height: 2em;
-  height: 2em;
+  line-height: 2.5vw;
+  height: 2.5vw;
 }
 
 .cardPrice:hover {
