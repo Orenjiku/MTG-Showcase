@@ -15,7 +15,6 @@
 
 .siteHeader {
   grid-column: 2 / 3;
-  max-width: 1700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +25,6 @@
 
 .setSelectorContainer {
   grid-column: 2 / 3;
-  max-width: 1700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +45,6 @@
 
 .innerCardContainer {
   grid-column: 2 / 3;
-  max-width: 1700px;
 }
 
 .cardColumnsContainer {
