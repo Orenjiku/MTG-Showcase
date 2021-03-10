@@ -13,10 +13,9 @@
 
 .gridContainer {
   display: grid;
-  background-color: black;
-  grid-template-columns: 1fr 5fr 1fr;
-  justify-content: center;
+  grid-template-columns: 1fr 6fr 1fr;
   max-width: 1800px;
+  background-color: black;
 }
 
 .innerGridContainer {
@@ -85,7 +84,6 @@
 }
 
 .scrollButtonContainer {
-  /* grid-column: 2 / 3; */
   display: flex;
   justify-content: center;
   align-items: center;
