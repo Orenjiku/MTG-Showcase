@@ -19,23 +19,25 @@
   max-width: 1800px;
 }
 
-.siteHeader {
+.innerGridContainer {
   grid-column: 2 / 3;
+}
+
+.title {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3.5vw;
-  color: white;
   margin: 2vw 0vw;
+  color: white;
 }
 
 .setSelectorContainer {
-  grid-column: 2 / 3;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   margin-bottom: 3vw;
+  color: white;
 }
 
 .setSelectLabel {
@@ -46,10 +48,6 @@
 .setSelector {
   font-size: 0.8vw;
   border-radius: 5px;
-}
-
-.innerCardContainer {
-  grid-column: 2 / 3;
 }
 
 .cardColumnsContainer {
@@ -87,7 +85,7 @@
 }
 
 .scrollButtonContainer {
-  grid-column: 2 / 3;
+  /* grid-column: 2 / 3; */
   display: flex;
   justify-content: center;
   align-items: center;
