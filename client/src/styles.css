@@ -133,7 +133,7 @@
   background-color: transparent;
 }
 
-.modalCardContainer {
+.modalSingleContainer {
   display: flex;
   justify-content: center;
 }
@@ -143,9 +143,35 @@
   max-width: 85vw;
 }
 
+.modalDoubleContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .DoubleFacedCard {
   max-height: 85vh;
   max-width: 45vw;
+}
+
+/* for phones */
+@media only screen and (max-width: 400px) {
+  .modalInnerContainer {
+    display: block;
+    background-color: transparent;
+  }
+
+  .modalDoubleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 90vh;
+    max-width: 50vw;
+    justify-content: center;
+  }
+
+  .DoubleFacedCard {
+    max-height: 45vh;
+    max-width: 90vw;
+  }
 }
 
 .cardModalPrice {
