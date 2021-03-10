@@ -51,7 +51,7 @@ const App = (props) => {
         <CardBlock attribute='ExtendedArt' setCode={currentSetCode} />
         <CardBlock attribute='Showcase' setCode={currentSetCode} />
       </div>
-      {/* <ScrollButton scrollToTop={scrollToTop} /> */}
+      <ScrollButton scrollToTop={scrollToTop} />
     </div>
   );
 };

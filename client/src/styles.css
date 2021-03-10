@@ -7,13 +7,15 @@
 
 .mainContainer {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
   background-color: black;
+  grid-template-columns: 1fr 5fr 1fr;
+  justify-content: center;
   min-width: 680px;
 }
 
 .siteHeader {
   grid-column: 2 / 3;
+  max-width: 1700px;
   display: flex;
   justify-content: center;
   align-items: center;
