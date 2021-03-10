@@ -3,12 +3,13 @@
   margin: 0;
   padding: 0;
   font-family: Arial;
-  background-color: black;
 }
 
 .mainContainer {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
+  background-color: black;
+  min-width: 680px;
 }
 
 .siteHeader {
@@ -23,6 +24,7 @@
 
 .setSelectorContainer {
   grid-column: 2 / 3;
+  max-width: 1700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,16 +33,19 @@
 }
 
 .setSelectLabel {
-  font-size: 0.9vw;
-  margin-right: 0.8vw;
+  font-size: 18px;
+  margin-right: 10px;
 }
 
 .setSelector {
-  background-color: white;
+  font-size: 16px;
+  height: 25px;
+  border-radius: 5px;
 }
 
 .innerCardContainer {
   grid-column: 2 / 3;
+  max-width: 1700px;
 }
 
 .cardColumnsContainer {
@@ -68,7 +73,6 @@
 }
 
 .cardImage {
-  /* min-height: 400px; */
   height: auto;
   max-width: 100%;
   object-fit: cover;
