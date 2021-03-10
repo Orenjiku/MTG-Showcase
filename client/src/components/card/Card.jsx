@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from '@material-ui/core/Modal';
 import CardSingle from './CardSingle.jsx';
 import CardDouble from './CardDouble.jsx';
+import CardPrice from './CardPrice.jsx';
 
 const Card = ({ card, loading='eager' }) => {
 
@@ -20,12 +21,7 @@ const Card = ({ card, loading='eager' }) => {
             ) : (
               <CardSingle card={card} />
             )}
-            <div className='cardModalPrice'>
-              <a className='cardPrice' href={card.purchase_uris?.tcgplayer} target='_blank'>
-                {card.reprint ? 'Reprint | ' : 'New | '}
-                {card.prices?.usd ? `Normal: $${card.prices.usd}` : card.prices?.usd_foil ? `Foil: $${card.prices.usd_foil}` : null}
-              </a>
-            </div>
+            <CardPrice card={card} />
           </div>
         </div>
       </Modal>
