@@ -25,8 +25,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3.5vw;
-  margin: 2vw 0vw;
+  font-size: max(24px, min(3.5vw, 63px)); /* 1800px(max-width) * 3.5vw(%) / 100% = 63px */
+  margin: max(10px, 2vw) 0vw; /* 500px(min-width) * 2vw(%) / 100$ = 10px */
   color: white;
 }
 
@@ -34,17 +34,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3vw;
+  margin-bottom: max(15px, 3vw);
   color: white;
 }
 
 .setSelectLabel {
-  font-size: 1vw;
-  margin-right: 1vw;
+  font-size: max(12px, min(1vw, 18px));
+  margin-right: max(12px, min(1vw, 18px));
 }
 
 .setSelector {
-  font-size: 0.8vw;
+  font-size: max(12px, min(0.9vw, 16.2px));
+  text-align-last: center;
   border-radius: 5px;
   background-color: white;
 }
@@ -153,27 +154,6 @@
   max-width: 45vw;
 }
 
-/* for phones */
-@media only screen and (max-width: 500px) {
-  .modalInnerContainer {
-    display: block;
-    background-color: transparent;
-  }
-
-  .modalDoubleContainer {
-    display: flex;
-    flex-wrap: wrap;
-    max-height: 90vh;
-    max-width: 50vw;
-    justify-content: center;
-  }
-
-  .DoubleFacedCard {
-    max-height: 45vh;
-    max-width: 90vw;
-  }
-}
-
 .cardModalPrice {
   display: flex;
   width: 100%;
@@ -185,15 +165,40 @@
 .cardPrice {
   width: 80%;
   color: black;
-  font-size: 1.5vw;
+  font-size: min(1.5vw, 27px); /* 1800px(max-width) * 1.5vw(%) / 100% = 27px*/
   background-color: white;
   text-decoration: none;
-  border-bottom-left-radius: 3vw;
-  border-bottom-right-radius: 3vw;
-  line-height: 2.5vw;
-  height: 2.5vw;
+  border-bottom-left-radius: min(3vw, 54px);
+  border-bottom-right-radius: min(3vw, 54px);
+  line-height: min(2.5vw, 45px);
+  height: min(2.5vw, 45px);
 }
 
 .cardPrice:hover {
   background-color: lightskyblue;
+}
+
+/* for phones */
+@media only screen and (max-width: 500px) {
+  .setSelectLabel {
+    display: none;
+  }
+
+  .modalInnerContainer {
+    display: block;
+    max-width: 50vw;
+    background-color: transparent;
+  }
+
+  .modalDoubleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80vw;
+    justify-content: center;
+  }
+
+  .DoubleFacedCard {
+    max-height: 45vh;
+    max-width: 90vw;
+  }
 }

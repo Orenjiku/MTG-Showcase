@@ -22,13 +22,6 @@ const App = (props) => {
       });
   }, []);
 
-  // useEffect(() => {
-  //   setTimeout(()=> {
-  //     let component = document.getElementsByClassName('mainContainer');
-  //     console.log(window.innerHeight);
-  //   }, 5000);
-  // }, [setList]);
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
