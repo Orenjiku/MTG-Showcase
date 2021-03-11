@@ -170,13 +170,13 @@ option {
 .cardPrice {
   width: 80%;
   color: black;
-  font-size: min(1.5vw, 27px); /* 1800px(max-width) * 1.5vw(%) / 100% = 27px*/
+  font-size: max(12px, min(1.5vw, 27px)); /* 1800px(max-width) * 1.5vw(%) / 100% = 27px*/
   background-color: white;
   text-decoration: none;
-  border-bottom-left-radius: min(3vw, 54px);
-  border-bottom-right-radius: min(3vw, 54px);
-  line-height: min(2.5vw, 45px);
-  height: min(2.5vw, 45px);
+  border-bottom-left-radius: max(15px, min(3vw, 54px));
+  border-bottom-right-radius: max(15px, min(3vw, 54px));
+  line-height: max(20px, min(2.5vw, 45px)); /* 20px based on 800px * 2.5vw(%) / 100% */
+  height: max(20px, min(2.5vw, 45px));
 }
 
 .cardPrice:hover {
