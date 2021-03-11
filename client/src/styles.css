@@ -26,7 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: max(24px, min(3.5vw, 63px)); /* 1800px(max-width) * 3.5vw(%) / 100% = 63px */
+  font-size: max(30px, min(3.5vw, 63px)); /* 1800px(max-width) * 3.5vw(%) / 100% = 63px */
   margin: max(20px, min(2vw, 36px)) 0vw;
   color: white;
 }
@@ -185,25 +185,29 @@ option {
 
 /* for phones */
 @media only screen and (max-width: 500px) {
-  .setSelectLabel {
-    display: none;
+  .setSelectorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: max(20px, min(3vw, 54px));
+    color: white;
   }
 
   .modalInnerContainer {
     display: block;
-    max-width: 50vw;
     background-color: transparent;
   }
 
   .modalDoubleContainer {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 80vw;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-height: 85vh;
   }
 
   .DoubleFacedCard {
-    max-height: 45vh;
+    max-height: 42.5vh;
     max-width: 90vw;
   }
 }
