@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   font-size: max(24px, min(3.5vw, 63px)); /* 1800px(max-width) * 3.5vw(%) / 100% = 63px */
-  margin: max(10px, 2vw) 0vw; /* 500px(min-width) * 2vw(%) / 100$ = 10px */
+  margin: max(20px, min(2vw, 36px)) 0vw;
   color: white;
 }
 
@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: max(15px, 3vw);
+  margin-bottom: max(20px, min(3vw, 54px));
   color: white;
 }
 
@@ -64,9 +64,9 @@
 .sectionLabel {
   display: flex;
   justify-content: center;
-  font-size: 2vw;
+  font-size: max(12px, min(2vw, 36px));
   color: white;
-  margin: 4vw 0vw 2vw 0vw;
+  margin: max(20px, 4vw) 0vw max(10px, 2vw) 0vw;
 }
 
 .cardBlock {
@@ -95,7 +95,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4vw 0vw;
+  margin: max(20px, min(4vw, 72px)) 0vw;
 }
 
 .scrollButton {
@@ -103,9 +103,9 @@
   box-sizing: border-box;
   background-color: white;
   font-family: Arial;
-  font-size: 1vw;
-  padding: 0.6vw 1.5vw;
-  border-radius: 0.6vw;
+  font-size: max(12px, min(1vw, 18px));
+  padding: max(7px, min(0.6vw, 10.8px)) max(14px, min(1.5vw, 27px));
+  border-radius: max(5px, min(0.6vw, 10.8px));
 }
 
 .scrollButton:hover {
