@@ -185,7 +185,7 @@ option {
 }
 
 /* for phones */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .setSelectorContainer {
     display: flex;
     flex-direction: column;
