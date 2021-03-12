@@ -1,7 +1,7 @@
 {
-  "name": "mtg",
+  "name": "MTG-Showcase",
   "version": "1.0.0",
-  "description": "",
+  "description": "Card Gallery",
   "main": "server.js",
   "scripts": {
     "heroku-postbuild": "webpack --mode production",

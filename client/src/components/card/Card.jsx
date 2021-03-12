@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Modal from '@material-ui/core/Modal';
+import { Modal } from '@material-ui/core';
 import CardSingle from './CardSingle.jsx';
 import CardDouble from './CardDouble.jsx';
 import CardPrice from './CardPrice.jsx';

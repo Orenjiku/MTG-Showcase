@@ -16,7 +16,7 @@ module.exports = {
 
   getMonoColoredCards: (req, res) => {
     const { setCode, colors } = req.params;
-    axios.get(`${cardUrl}&q=color=${colors}+set=${setCode}`)
+    axios.get(`${cardUrl}&q=set=${setCode}+color=${colors}`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })
@@ -28,7 +28,7 @@ module.exports = {
 
   getMultiColoredCards: (req, res) => {
     const { setCode } = req.params;
-    axios.get(`${cardUrl}&q=color=${'multicolor'}+set=${setCode}+-type=land+-border=borderless+-frame=extendedart+-color=white+-color=blue+-color=black+-color=red+-color=green`)
+    axios.get(`${cardUrl}&q=set=${setCode}+color=${'multicolor'}+-type=land+-border=borderless+-frame=extendedart+-color=white+-color=blue+-color=black+-color=red+-color=green`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })
@@ -40,7 +40,7 @@ module.exports = {
 
   getColorlessCards: (req, res) => {
     const { setCode } = req.params;
-    axios.get(`${cardUrl}&q=color=${'colorless'}+set=${setCode}+-type=land`)
+    axios.get(`${cardUrl}&q=set=${setCode}+color=${'colorless'}+-type=land`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })
@@ -52,7 +52,7 @@ module.exports = {
 
   getBorderlessCards: (req, res) => {
     const { setCode } = req.params;
-    axios.get(`${cardUrl}&q=border=borderless+set=${setCode}+-frame=extendedart+-frame=showcase`)
+    axios.get(`${cardUrl}&q=set=${setCode}+border=borderless+-frame=extendedart+-frame=showcase`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })
@@ -64,7 +64,7 @@ module.exports = {
 
   getExtendedArtCards: (req, res) => {
     const { setCode } = req.params;
-    axios.get(`${cardUrl}&q=frame=extendedart+set=${setCode}+-border=borderless+-frame=showcase`)
+    axios.get(`${cardUrl}&q=set=${setCode}+frame=extendedart+-border=borderless+-frame=showcase`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })
@@ -76,7 +76,7 @@ module.exports = {
 
   getShowcaseCards: (req, res) => {
     const { setCode } = req.params;
-    axios.get(`${url}/cards/search?order=rarity&dir=desc&q=frame=showcase+set=${setCode}`)
+    axios.get(`${cardUrl}&q=set=${setCode}+frame=showcase`)
       .then(({ data }) => {
         res.status(200).json(data.data);
       })
