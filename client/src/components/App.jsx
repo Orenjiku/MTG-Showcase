@@ -10,11 +10,14 @@ const App = (props) => {
 
   const [setList, setSetList] = useState([]);
   const [currentSetCode, setCurrentSetCode] = useState('khm');
-  let showScrollButton = true;
+  let showScrollButton = false;
 
   useEffect(() => {
     axios.get('/sets')
       .then(({ data }) => {
+        if (data.length > 50) {
+          showScrollButton = true;
+        }
         setSetList(data);
       })
       .catch(err => {
