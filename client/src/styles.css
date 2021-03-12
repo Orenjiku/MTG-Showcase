@@ -83,12 +83,13 @@ option {
   display: flex;
   justify-content: center;
   align-items: center;
+  aspect-ratio: 12 / 17;
 }
 
 .card {
   height: auto;
   width: 100%;
-  aspect-ratio: 12 / 17;
+  /* aspect-ratio: 12 / 17; */
   object-fit: cover;
 }
 
