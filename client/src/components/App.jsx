@@ -26,7 +26,7 @@ const App = (props) => {
     setTimeout(() => {
       let height = document.getElementsByClassName('mainContainer')[0].getBoundingClientRect().height;
       height > window.innerHeight ? setShowScrollButton(true) : setShowScrollButton(false);
-    }, 1000);
+    }, 750);
   }, [currentSetCode]);
 
   const scrollToTop = () => {
