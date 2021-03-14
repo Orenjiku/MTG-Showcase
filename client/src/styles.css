@@ -89,7 +89,6 @@ option {
 .card {
   height: auto;
   width: 100%;
-  /* aspect-ratio: 12 / 17; */
   object-fit: cover;
 }
 
@@ -173,7 +172,7 @@ option {
   background-color: white;
   text-decoration: none;
   width: 100%;
-  /* modal image native: 672px(w) x 936px(h), aspect-ratio: 28:39 */
+  /* properties scale from dynamically calculated width (modal image native: 672px(w) x 936px(h), aspect-ratio: 28:39) */
   font-size: calc(4.5 / 100 * min(min(calc(936px * 28/39), calc(85vh * 28/39)), 85vw));
   line-height: calc(8 / 100 * min(min(calc(936px * 28/39), calc(85vh * 28/39)), 85vw));
   height: calc(8 / 100 * min(min(calc(936px * 28/39), calc(85vh * 28/39)), 85vw));
@@ -187,6 +186,14 @@ option {
 
 /* for phones */
 @media only screen and (max-width: 500px) {
+  .innerContainer {
+    grid-column: 1 / 4;
+  }
+
+  .header {
+    grid-column: 2 / 3;
+  }
+
   .setSelectorContainer {
     display: flex;
     flex-direction: column;
