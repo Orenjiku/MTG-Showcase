@@ -10,7 +10,7 @@ const App = (props) => {
 
   const [setList, setSetList] = useState([]);
   const [currentSetCode, setCurrentSetCode] = useState('khm');
-  let showScrollButton = true;
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
   useEffect(() => {
     axios.get('/sets')
@@ -21,6 +21,17 @@ const App = (props) => {
         console.log('Unable to get MTG sets');
       });
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      let height = document.getElementsByClassName('mainContainer')[0].getBoundingClientRect().height;
+      if (height > window.innerHeight) {
+        setShowScrollButton(true);
+      } else if (height < window.innerHeight) {
+        setShowScrollButton(false);
+      }
+    }, 500);
+  }, [currentSetCode]);
 
   const scrollToTop = () => {
     window.scrollTo({

@@ -172,7 +172,7 @@ option {
   background-color: white;
   text-decoration: none;
   width: 100%;
-  /* properties scale from dynamically calculated width (modal image native: 672px(w) x 936px(h), aspect-ratio: 28:39) */
+  /* properties scale proportionally to a dynamically calculated width (image native: 672px(w) x 936px(h), aspect-ratio: 28:39) */
   font-size: calc(4.5 / 100 * min(min(calc(936px * 28/39), calc(85vh * 28/39)), 85vw));
   line-height: calc(8 / 100 * min(min(calc(936px * 28/39), calc(85vh * 28/39)), 85vw));
   height: calc(8 / 100 * min(min(calc(936px * 28/39), calc(85vh * 28/39)), 85vw));
