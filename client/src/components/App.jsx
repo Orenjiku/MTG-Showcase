@@ -39,8 +39,8 @@ const App = (props) => {
   return (
     <div className='mainContainer'>
       <div className='gridContainer'>
+        <Header setList={setList} currentSetCode={currentSetCode} setCurrentSetCode={setCurrentSetCode} />
         <div className='innerContainer'>
-          <Header setList={setList} currentSetCode={currentSetCode} setCurrentSetCode={setCurrentSetCode} />
           <div className='cardColumnsContainer'>
             <CardColumn attribute='white' setCode={currentSetCode} />
             <CardColumn attribute='blue' setCode={currentSetCode} />

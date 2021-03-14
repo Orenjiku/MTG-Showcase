@@ -9,6 +9,7 @@
 .mainContainer {
   display: flex;
   justify-content: center;
+  width: auto;
 }
 
 .gridContainer {
@@ -18,6 +19,9 @@
   max-width: 1800px;
 }
 
+.header {
+  grid-column: 2 / 3;
+}
 .innerContainer {
   grid-column: 2 / 3;
 }
@@ -193,6 +197,10 @@ option {
     align-items: center;
     margin-bottom: max(20px, min(3vw, 54px));
     color: white;
+  }
+
+  .innerContainer {
+    grid-column: 1 / 4;
   }
 
   .modalInnerContainer {
