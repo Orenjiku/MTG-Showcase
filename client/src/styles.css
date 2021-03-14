@@ -186,14 +186,6 @@ option {
 
 /* for phones */
 @media only screen and (max-width: 500px) {
-  .innerContainer {
-    grid-column: 1 / 4;
-  }
-
-  .header {
-    grid-column: 2 / 3;
-  }
-
   .setSelectorContainer {
     display: flex;
     flex-direction: column;

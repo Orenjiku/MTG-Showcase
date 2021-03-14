@@ -25,12 +25,8 @@ const App = (props) => {
   useEffect(() => {
     setTimeout(() => {
       let height = document.getElementsByClassName('mainContainer')[0].getBoundingClientRect().height;
-      if (height > window.innerHeight) {
-        setShowScrollButton(true);
-      } else if (height < window.innerHeight) {
-        setShowScrollButton(false);
-      }
-    }, 500);
+      height > window.innerHeight ? setShowScrollButton(true) : setShowScrollButton(false);
+    }, 1000);
   }, [currentSetCode]);
 
   const scrollToTop = () => {
