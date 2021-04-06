@@ -1,7 +1,10 @@
 # MTG-Showcase
 Card Gallery
+<br>
 Displays Magic: The Gathering cards based on user selected set.
+<br>
 https://mtg-showcase.herokuapp.com/
+<br>
 
 ### Installation
 
